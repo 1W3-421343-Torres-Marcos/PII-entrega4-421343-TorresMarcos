@@ -1,0 +1,6 @@
+@Envios_comercio_HostAddress = http://localhost:5283
+
+GET {{Envios_comercio_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

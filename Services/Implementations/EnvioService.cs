@@ -1,16 +1,23 @@
 ﻿using Envios_comercio.Repositories.Dtos;
+using Envios_comercio.Repositories.Interfaces;
 using Envios_comercio.Services.Interfaces;
 
 namespace Envios_comercio.Services.Implementations
 {
     public class EnvioService : IEnvioService
     {
-        public bool CreateProduct(CreateEnvioDto envioDto)
+        private readonly IEnvioRepository _repository;
+
+        public EnvioService(IEnvioRepository repository)
+        {
+            _repository = repository;
+        }
+        public bool CreateEnvio(CreateEnvioDto envioDto)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteProduct(int codigo)
+        public bool DeleteEnvio(int codigo)
         {
             throw new NotImplementedException();
         }
@@ -20,9 +27,9 @@ namespace Envios_comercio.Services.Implementations
             throw new NotImplementedException();
         }
 
-        public List<EnvioDto> GetAllProducts()
+        public List<EnvioDto> GetAllEnvios()
         {
-            throw new NotImplementedException();
+            return _repository.GetAll();
         }
 
         public EnvioDto? GetProductById(int codigo)
@@ -30,7 +37,7 @@ namespace Envios_comercio.Services.Implementations
             throw new NotImplementedException();
         }
 
-        public bool SaveProduct(EnvioDto product)
+        public bool SaveEnvio(EnvioDto product)
         {
             throw new NotImplementedException();
         }
@@ -40,7 +47,7 @@ namespace Envios_comercio.Services.Implementations
             throw new NotImplementedException();
         }
 
-        public bool UpdateProduct(UpdateEnvioDto envioDto)
+        public bool UpdateEnvio(UpdateEnvioDto envioDto)
         {
             throw new NotImplementedException();
         }

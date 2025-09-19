@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Envios comercio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c19104f4becdb5d7279b6c274b774613897a4b0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9773709be0cf1cabe0c10b43a5fd9e1326be36d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Envios comercio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Envios comercio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

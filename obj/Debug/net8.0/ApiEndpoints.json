@@ -1,0 +1,102 @@
+[
+  {
+    "ContainingType": "Envios_comercio.Controllers.EnvioController",
+    "Method": "GetAll",
+    "RelativePath": "api/Envio",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Envios_comercio.Controllers.EnvioController",
+    "Method": "Create",
+    "RelativePath": "api/Envio",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "envio",
+        "Type": "Envios_comercio.Repositories.Dtos.EnvioDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Envios_comercio.Controllers.EnvioController",
+    "Method": "Update",
+    "RelativePath": "api/Envio",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "envio",
+        "Type": "Envios_comercio.Repositories.Dtos.EnvioDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Envios_comercio.Controllers.EnvioController",
+    "Method": "GetActive",
+    "RelativePath": "api/Envio",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Envios_comercio.Controllers.EnvioController",
+    "Method": "GetById",
+    "RelativePath": "api/Envio/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Envios_comercio.Controllers.EnvioController",
+    "Method": "Delete",
+    "RelativePath": "api/Envio/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Envios_comercio.Controllers.EnvioController",
+    "Method": "GetByDni",
+    "RelativePath": "search/{dni}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dni",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

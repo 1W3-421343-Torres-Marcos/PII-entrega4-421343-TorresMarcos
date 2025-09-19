@@ -1,15 +1,16 @@
 ﻿using Envios_comercio.Models;
+using Envios_comercio.Repositories.Dtos;
 
 namespace Envios_comercio.Repositories.Interfaces
 {
     public interface IEnvioRepository
     {
 
-        List<Envio> GetAll();
-        Envio? GetById(int codigo);
-        bool Create(Envio envio);
-        bool Update(Envio envio);
+        List<EnvioDto> GetAll();
+        EnvioDto? GetById(int codigo);
+        bool Create(EnvioDto envio);
+        bool Update(EnvioDto envio);
         bool Delete(int codigo);
-        bool Save(Envio envio);
+        bool Save(EnvioDto envio);
     }
 }

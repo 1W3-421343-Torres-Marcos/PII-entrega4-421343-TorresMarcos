@@ -5,12 +5,12 @@ namespace Envios_comercio.Services.Interfaces
 {
     public interface IEnvioService
     {
-        List<EnvioDto> GetAllProducts();
+        List<EnvioDto> GetAllEnvios();
         EnvioDto? GetProductById(int codigo);
-        bool CreateProduct(CreateEnvioDto envioDto);
-        bool UpdateProduct(UpdateEnvioDto envioDto);
-        bool DeleteProduct(int codigo);
-        bool SaveProduct(EnvioDto product);
+        bool CreateEnvio(CreateEnvioDto envioDto);
+        bool UpdateEnvio(UpdateEnvioDto envioDto);
+        bool DeleteEnvio(int codigo);
+        bool SaveEnvio(EnvioDto product);
         List<EnvioDto> GetActivos();
         List<EnvioDto> SearchByCostumer(string dni);
 

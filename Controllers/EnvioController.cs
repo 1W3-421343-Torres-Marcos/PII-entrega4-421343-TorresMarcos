@@ -55,9 +55,15 @@ namespace Envios_comercio.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
+            if (id < 1) { return StatusCode(400, "ingrese un numero valido"); }
             try
             {
-                return Ok(_service.DeleteEnvio(id));
+                bool resultado = _service.DeleteEnvio(id);
+                if (!resultado)
+                {
+                    return StatusCode(404, "no hay envio con ese id o ya esta cancelado");
+                }
+                return Ok(resultado);
             }
             catch (Exception)
             {
@@ -94,7 +100,7 @@ namespace Envios_comercio.Controllers
                         filtrado.Add(envio);
                     }
                 }
-                if(filtrado.Count < 1)
+                if (filtrado.Count < 1)
                 {
                     return StatusCode(404, "no hay envios a esa direccion");
                 }

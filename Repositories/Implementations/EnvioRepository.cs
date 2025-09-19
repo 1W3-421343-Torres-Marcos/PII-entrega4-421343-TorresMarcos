@@ -37,7 +37,16 @@ namespace Envios_comercio.Repositories.Implementations
 
         public EnvioDto? GetById(int codigo)
         {
-            throw new NotImplementedException();
+            Envio? envio = _context.Envios.Include(e => e.DetallesEnvios).FirstOrDefault(e => e.Id == codigo);
+            if (envio != null)
+            {
+                EnvioDto envioDto = MapToDto(envio);
+                return envioDto;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public bool Save(EnvioDto envio)
@@ -64,8 +73,16 @@ namespace Envios_comercio.Repositories.Implementations
                 DetalleEnvioDto detalleEnvioDto = new DetalleEnvioDto();
                 Producto? producto = _context.Productos.Find(d.IdProducto);
                 ProductoDto productoDto = new ProductoDto();
-                productoDto.Precio = producto.Precio;
-                productoDto.Nombre = producto.Nombre;
+                if (producto != null)
+                {
+                    productoDto.Precio = producto.Precio;
+                    productoDto.Nombre = producto.Nombre;
+                }
+                else
+                {
+                    productoDto.Precio = 0;
+                    productoDto.Nombre = "sin nombre";
+                }
                 detalleEnvioDto.productoDto = productoDto;
                 detalleEnvioDto.Cantidad = d.Cantidad;
                 detalleEnvioDto.Comentario = d.Comentario;

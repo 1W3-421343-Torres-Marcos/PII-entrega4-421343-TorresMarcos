@@ -31,7 +31,15 @@ namespace Envios_comercio.Controllers
         [HttpGet("{id}")]
         public ActionResult GetById(int id)
         {
-            return View();
+            try
+            {
+                return Ok(_service.GetEnvioById(id));
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "error en servidor");
+            }
+            ; 
         }
         [HttpPost]
         public ActionResult Create(EnvioDto envio)

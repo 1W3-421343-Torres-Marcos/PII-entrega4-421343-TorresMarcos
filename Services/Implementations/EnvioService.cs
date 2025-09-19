@@ -32,9 +32,9 @@ namespace Envios_comercio.Services.Implementations
             return _repository.GetAll();
         }
 
-        public EnvioDto? GetProductById(int codigo)
+        public EnvioDto? GetEnvioById(int codigo)
         {
-            throw new NotImplementedException();
+            return _repository.GetById(codigo);
         }
 
         public bool SaveEnvio(EnvioDto product)

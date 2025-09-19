@@ -6,7 +6,7 @@ namespace Envios_comercio.Services.Interfaces
     public interface IEnvioService
     {
         List<EnvioDto> GetAllEnvios();
-        EnvioDto? GetProductById(int codigo);
+        EnvioDto? GetEnvioById(int codigo);
         bool CreateEnvio(CreateEnvioDto envioDto);
         bool UpdateEnvio(UpdateEnvioDto envioDto);
         bool DeleteEnvio(int codigo);

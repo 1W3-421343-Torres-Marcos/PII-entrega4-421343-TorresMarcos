@@ -20,7 +20,11 @@ namespace Envios_comercio.Repositories.Implementations
 
         public bool Delete(int codigo)
         {
-            throw new NotImplementedException();
+            Envio? envio = _context.Envios.Find(codigo);
+            if (envio == null) { return false; }
+            envio.Estado = "Cancelado";
+            if (_context.SaveChanges() > 0) { return true; }
+            else { return false; }
         }
 
         public List<EnvioDto> GetAll()
@@ -62,7 +66,7 @@ namespace Envios_comercio.Repositories.Implementations
         public List<EnvioDto> GetActivos()
         {
             List<EnvioDto> enviosDto = new List<EnvioDto>();
-            List<Envio> envios = _context.Envios.Where(e=> e.Estado != "Cancelado").Include(e => e.DetallesEnvios).ToList();
+            List<Envio> envios = _context.Envios.Where(e => e.Estado != "Cancelado").Include(e => e.DetallesEnvios).ToList();
             foreach (Envio e in envios)
             {
                 EnvioDto enviodto = MapToDto(e);

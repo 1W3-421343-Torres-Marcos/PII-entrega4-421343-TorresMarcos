@@ -20,7 +20,7 @@ namespace Envios_comercio.Services.Implementations
 
         public bool DeleteEnvio(int codigo)
         {
-            throw new NotImplementedException();
+            return _repository.Delete(codigo);
         }
 
         public List<EnvioDto> GetActivos()

@@ -55,7 +55,15 @@ namespace Envios_comercio.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            return View();
+            try
+            {
+                return Ok(_service.DeleteEnvio(id));
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "error en servidor");
+            }
+            ;
         }
 
         [HttpGet("/active")]

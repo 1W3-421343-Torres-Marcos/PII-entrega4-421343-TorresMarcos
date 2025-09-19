@@ -25,16 +25,7 @@ namespace Envios_comercio.Services.Implementations
 
         public List<EnvioDto> GetActivos()
         {
-            List<EnvioDto> enviosDto = _repository.GetAll();
-            List<EnvioDto> listaFiltrada = new List<EnvioDto>();
-            foreach (EnvioDto envioDto in enviosDto)
-            {
-                if (envioDto.Estado != "Cancelado")
-                {
-                    listaFiltrada.Add(envioDto);
-                }
-            }
-            return listaFiltrada;
+            return _repository.GetActivos();
         }
 
         public List<EnvioDto> GetAllEnvios()

@@ -59,6 +59,18 @@ namespace Envios_comercio.Repositories.Implementations
             throw new NotImplementedException();
         }
 
+        public List<EnvioDto> GetActivos()
+        {
+            List<EnvioDto> enviosDto = new List<EnvioDto>();
+            List<Envio> envios = _context.Envios.Where(e=> e.Estado != "Cancelado").Include(e => e.DetallesEnvios).ToList();
+            foreach (Envio e in envios)
+            {
+                EnvioDto enviodto = MapToDto(e);
+                enviosDto.Add(enviodto);
+            }
+            return enviosDto; ;
+        }
+
         public EnvioDto MapToDto(Envio envio)
         {
             EnvioDto dto = new EnvioDto();

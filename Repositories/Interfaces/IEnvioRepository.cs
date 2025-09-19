@@ -8,6 +8,7 @@ namespace Envios_comercio.Repositories.Interfaces
 
         List<EnvioDto> GetAll();
         EnvioDto? GetById(int codigo);
+        List<EnvioDto> GetActivos();
         bool Create(EnvioDto envio);
         bool Update(EnvioDto envio);
         bool Delete(int codigo);

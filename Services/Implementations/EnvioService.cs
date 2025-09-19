@@ -1,6 +1,7 @@
 ﻿using Envios_comercio.Repositories.Dtos;
 using Envios_comercio.Repositories.Interfaces;
 using Envios_comercio.Services.Interfaces;
+using System.Collections.Generic;
 
 namespace Envios_comercio.Services.Implementations
 {
@@ -24,7 +25,16 @@ namespace Envios_comercio.Services.Implementations
 
         public List<EnvioDto> GetActivos()
         {
-            throw new NotImplementedException();
+            List<EnvioDto> enviosDto = _repository.GetAll();
+            List<EnvioDto> listaFiltrada = new List<EnvioDto>();
+            foreach (EnvioDto envioDto in enviosDto)
+            {
+                if (envioDto.Estado != "Cancelado")
+                {
+                    listaFiltrada.Add(envioDto);
+                }
+            }
+            return listaFiltrada;
         }
 
         public List<EnvioDto> GetAllEnvios()

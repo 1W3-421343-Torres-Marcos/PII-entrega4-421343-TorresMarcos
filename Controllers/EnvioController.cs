@@ -61,7 +61,15 @@ namespace Envios_comercio.Controllers
         [HttpGet("/active")]
         public ActionResult GetActive()
         {
-            return View();
+            try
+            {
+                return Ok(_service.GetActivos());
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "error en servidor");
+            }
+            ;
         }
 
         [HttpGet("/search/{dni}")]

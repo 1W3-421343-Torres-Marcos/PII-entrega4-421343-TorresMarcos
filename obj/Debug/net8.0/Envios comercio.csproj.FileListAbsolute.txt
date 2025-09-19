@@ -170,3 +170,4 @@ C:\Users\marco\Desktop\tecnicatura\2do cuatrimestre\Programacion 2\unidad 3\Entr
 C:\Users\marco\Desktop\tecnicatura\2do cuatrimestre\Programacion 2\unidad 3\Entrega 4\Envios comercio\obj\Debug\net8.0\Envios comercio.pdb
 C:\Users\marco\Desktop\tecnicatura\2do cuatrimestre\Programacion 2\unidad 3\Entrega 4\Envios comercio\obj\Debug\net8.0\Envios comercio.genruntimeconfig.cache
 C:\Users\marco\Desktop\tecnicatura\2do cuatrimestre\Programacion 2\unidad 3\Entrega 4\Envios comercio\obj\Debug\net8.0\ref\Envios comercio.dll
+C:\Users\marco\Desktop\tecnicatura\2do cuatrimestre\Programacion 2\unidad 3\Entrega 4\Envios comercio\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

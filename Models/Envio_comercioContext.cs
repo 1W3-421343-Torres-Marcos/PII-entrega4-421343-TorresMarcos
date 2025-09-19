@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Envios_comercio.Models;
 
-public partial class Envios_comercioContext : DbContext
+public partial class Envio_comercioContext : DbContext
 {
-    public Envios_comercioContext(DbContextOptions<Envios_comercioContext> options)
+    public Envio_comercioContext(DbContextOptions<Envio_comercioContext> options)
         : base(options)
     {
     }

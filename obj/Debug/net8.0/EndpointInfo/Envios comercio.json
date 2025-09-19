@@ -131,14 +131,14 @@
         }
       }
     },
-    "/search/{dni}": {
+    "/search/{direccion}": {
       "get": {
         "tags": [
           "Envio"
         ],
         "parameters": [
           {
-            "name": "dni",
+            "name": "direccion",
             "in": "path",
             "required": true,
             "schema": {

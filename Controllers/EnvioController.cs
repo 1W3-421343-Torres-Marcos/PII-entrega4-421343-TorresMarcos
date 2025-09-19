@@ -39,7 +39,7 @@ namespace Envios_comercio.Controllers
             {
                 return StatusCode(500, "error en servidor");
             }
-            ; 
+            ;
         }
         [HttpPost]
         public ActionResult Create(EnvioDto envio)
@@ -72,10 +72,31 @@ namespace Envios_comercio.Controllers
             ;
         }
 
-        [HttpGet("/search/{dni}")]
-        public ActionResult GetByDni(string dni)
+        [HttpGet("/search/{direccion}")]
+        public ActionResult GetByDireccion(string direccion)
         {
-            return View();
+            try
+            {
+                List<EnvioDto> envios = _service.GetActivos();
+                List<EnvioDto> filtrado = new List<EnvioDto>();
+                foreach (EnvioDto envio in envios)
+                {
+                    if (envio.Direccion != null && envio.Direccion.ToLower().Contains(direccion.ToLower()))
+                    {
+                        filtrado.Add(envio);
+                    }
+                }
+                if(filtrado.Count < 1)
+                {
+                    return StatusCode(404, "no hay envios a esa direccion");
+                }
+                return Ok(filtrado);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "error en servidor");
+            }
+            ;
         }
     }
 }

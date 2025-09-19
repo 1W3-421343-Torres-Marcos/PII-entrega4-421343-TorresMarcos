@@ -85,14 +85,14 @@
   },
   {
     "ContainingType": "Envios_comercio.Controllers.EnvioController",
-    "Method": "GetByDni",
-    "RelativePath": "search/{dni}",
+    "Method": "GetByDireccion",
+    "RelativePath": "search/{direccion}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dni",
+        "Name": "direccion",
         "Type": "System.String",
         "IsRequired": true
       }
